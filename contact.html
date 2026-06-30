@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Paul Gray Performance</title>
+    <meta name="description" content="Get in touch about private coaching, camp enquiries, or general questions about Paul Gray Performance.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="logo">Paul Gray Performance</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/how-it-works.html">How It Works</a></li>
+                <li><a href="/contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Get In Touch</h1>
+                <p class="subtitle">Enquiries about private coaching, camps, or general questions</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Contact Information</h2>
+                        <div class="info-item">
+                            <h3>Email</h3>
+                            <p><a href="mailto:paul@paulgray.com.au">paul@paulgray.com.au</a></p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Location</h3>
+                            <p>Sydney, NSW</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Response Time</h3>
+                            <p>I typically respond within 24-48 hours</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <h2>Send a Message</h2>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a topic</option>
+                                    <option value="private-coaching">Private Coaching Enquiry</option>
+                                    <option value="camps">Camp Information</option>
+                                    <option value="community">Community Program</option>
+                                    <option value="general">General Question</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="cta-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Paul Gray Performance. All rights reserved.</p>
+            <p>Sydney, NSW | <a href="mailto:paul@paulgray.com.au">paul@paulgray.com.au</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
