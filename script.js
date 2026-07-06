@@ -1,50 +1,48 @@
-// Smooth scroll to signup section
-function scrollToSignup() {
-    const signupSection = document.getElementById('signup');
-    if (signupSection) {
-        signupSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+// ── Nav: add scrolled class for shadow ──────────────────────
+const nav = document.querySelector('.nav');
+if (nav) {
+  const onScroll = () => {
+    nav.classList.toggle('nav--scrolled', window.scrollY > 10);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
 }
 
-// Form handling
-document.addEventListener('DOMContentLoaded', () => {
-    // Signup form
-    const signupForm = document.getElementById('signupForm');
-    if (signupForm) {
-        signupForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            const formData = new FormData(signupForm);
-            const data = {
-                name: formData.get('name'),
-                email: formData.get('email')
-            };
-
-            // For now, just show a success message
-            // In production, this would send to an actual email service
-            alert('Thank you for signing up! Your free guide will be sent to ' + data.email);
-            signupForm.reset();
-        });
+// ── Smooth anchor scroll ─────────────────────────────────────
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-
-    // Contact form
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            const formData = new FormData(contactForm);
-            const data = {
-                name: formData.get('name'),
-                email: formData.get('email'),
-                subject: formData.get('subject'),
-                message: formData.get('message')
-            };
-
-            // For now, just show a success message
-            // In production, this would send to an actual email service
-            alert('Thank you for your message! I will get back to you within 24-48 hours.');
-            contactForm.reset();
-        });
-    }
+  });
 });
+
+// ── AJAX Form Submission (Netlify - Contact Form) ───────────
+const contactForm = document.querySelector('form[name="contact"]');
+if (contactForm) {
+  contactForm.addEventListener('submit', async e => {
+    e.preventDefault();
+    const submitBtn = contactForm.querySelector('[type="submit"]');
+    const originalText = submitBtn ? submitBtn.textContent : '';
+    if (submitBtn) {
+      submitBtn.textContent = 'Sending…';
+      submitBtn.disabled = true;
+    }
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(contactForm)).toString()
+      });
+      const wrapper = contactForm.closest('.contact__form-wrapper');
+      wrapper.innerHTML = '<div class="form-success-block"><p class="form-success">Got it — I\'ll be in touch within 24 hours. 👋</p></div>';
+    } catch (err) {
+      if (submitBtn) {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
+      alert('Something went wrong — please email directly at paul@paulgray.com.au');
+    }
+  });
+}

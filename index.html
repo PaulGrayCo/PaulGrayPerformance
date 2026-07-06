@@ -1,84 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paul Gray Performance - Building Stronger, Fitter Kids Through Swimming</title>
-    <meta name="description" content="Most kids today are weaker and less mobile than they should be. Paul Gray Performance builds the physical foundation first — strength, mobility, fitness — so swimming comes easier, faster, and safer.">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Building the physical foundation first — strength, mobility, fitness — so swimming (and everything after it) comes easier, faster, and safer for kids in Sydney.">
+  <meta name="theme-color" content="#F4F3EF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0C1820" media="(prefers-color-scheme: dark)">
+  <title>Paul Gray Performance | Kids' Athletic Foundation Through Swimming · Sydney</title>
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="nav">
-        <div class="nav-container">
-            <a href="/" class="logo">Paul Gray Performance</a>
-            <ul class="nav-links">
-                <li><a href="/" aria-current="page">Home</a></li>
-                <li><a href="/how-it-works.html">How It Works</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-            </ul>
+
+  <!-- ============================================================
+       NAV
+  ============================================================ -->
+  <header class="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo" aria-label="Paul Gray Performance — home">
+        Paul Gray Performance
+        <span>Building Athletic Foundations · Sydney</span>
+      </a>
+      <a href="#contact" class="btn btn--primary nav__cta">Get in touch →</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="hero" aria-label="Introduction">
+      <div class="container hero__inner">
+        <p class="hero__eyebrow" aria-hidden="true">Sydney · Ages 5–14 · Foundation Training</p>
+        <h1 class="hero__headline">
+          BUILDING <em>STRONGER</em>,<br>
+          FITTER KIDS<br>
+          THROUGH SWIMMING.
+        </h1>
+        <div class="lane-rope" aria-hidden="true"></div>
+        <p class="hero__body">
+          Most kids today are weaker and less mobile than they should be. It slows down how they learn to swim, limits how they perform in any sport, and raises injury risk later. Paul Gray Performance builds the physical foundation first — strength, mobility, fitness — so swimming (and everything after it) comes easier, faster, and safer.
+        </p>
+        <div class="hero__actions">
+          <a href="#signup" class="btn btn--primary">Get the free foundational guide →</a>
+          <a href="/how-it-works.html" class="btn btn--ghost">See how it works →</a>
         </div>
-    </nav>
+      </div>
+    </section>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Building Stronger, Fitter Kids Through Swimming</h1>
-                <p class="subtitle">Most kids today are weaker and less mobile than they should be. It slows down how they learn to swim, limits how they perform in any sport, and raises injury risk later.</p>
-                <p class="description">Paul Gray Performance builds the physical foundation first — strength, mobility, fitness — so swimming (and everything after it) comes easier, faster, and safer.</p>
-                <div class="cta-group">
-                    <button class="cta-primary" onclick="scrollToSignup()">Get the Free Foundational Guide</button>
-                    <a href="/how-it-works.html" class="cta-secondary">See How It Works</a>
-                </div>
+    <!-- ============================================================
+         VALUE PROPS
+    ============================================================ -->
+    <section class="services" aria-labelledby="services-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="services-heading">WHY PHYSICAL<br>FOUNDATION<br>MATTERS.</h2>
+          <p>Three outcomes every child should have before competitive training begins.</p>
+        </header>
+        <ul class="services__grid" role="list">
+
+          <li class="service-card">
+            <div class="service-card__num" aria-hidden="true">01</div>
+            <h3>Build Physical Foundation</h3>
+            <p>
+              Develop strength, mobility, and fitness before technique training begins.
+              Kids with better physical capability learn swimming skills quicker and more efficiently.
+            </p>
+          </li>
+
+          <li class="service-card">
+            <div class="service-card__num" aria-hidden="true">02</div>
+            <h3>Progress Faster</h3>
+            <p>
+              When a child's body is already capable, lesson time goes to actual technique
+              instead of building basic body control. They move through learn-to-swim and
+              squad pathways faster.
+            </p>
+          </li>
+
+          <li class="service-card">
+            <div class="service-card__num" aria-hidden="true">03</div>
+            <h3>Reduce Injury Risk</h3>
+            <p>
+              Strong, mobile bodies are more resilient and less prone to sports injuries.
+              The foundation we build applies to all sports and physical activities, not just swimming.
+            </p>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EMAIL SIGNUP (dark section)
+    ============================================================ -->
+    <section class="signup" id="signup" aria-label="Get free guide">
+      <div class="container">
+        <h2 class="signup__heading">GET YOUR FREE<br>FOUNDATIONAL<br>GUIDE.</h2>
+        <p class="signup__sub">
+          Practical exercises, motivation techniques that actually work with kids, and insights
+          you can use with your children this week. No generic advice — specific, actionable guidance
+          on building the physical foundation that makes swimming (and all sports) easier.
+        </p>
+        <script async data-uid="d7340a8010" src="https://paulgray.kit.com/d7340a8010/index.js"></script>
+        <p class="signup__note">No spam. Unsubscribe any time. Free guide sent immediately.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CREDENTIALS
+    ============================================================ -->
+    <section class="credentials" aria-labelledby="cred-heading">
+      <div class="container">
+        <p id="cred-heading" class="section-label">Qualifications &amp; certifications</p>
+        <ul class="credentials__grid" role="list">
+
+          <li class="cred-badge">
+            <div class="cred-badge__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 17c3-2 5-2 7 0s4 2 7 0M3 12c3-2 5-2 7 0s4 2 7 0"/>
+                <circle cx="12" cy="6" r="2"/>
+              </svg>
             </div>
-        </section>
-
-        <section class="value-props">
-            <div class="container">
-                <div class="prop-grid">
-                    <div class="prop-card">
-                        <h3>Build Physical Foundation</h3>
-                        <p>Develop strength, mobility, and fitness before technique training begins</p>
-                    </div>
-                    <div class="prop-card">
-                        <h3>Progress Faster</h3>
-                        <p>Kids with better physical capability learn swimming skills quicker and more efficiently</p>
-                    </div>
-                    <div class="prop-card">
-                        <h3>Reduce Injury Risk</h3>
-                        <p>Strong, mobile bodies are more resilient and less prone to sports injuries</p>
-                    </div>
-                </div>
+            <div>
+              <strong class="cred-badge__name">Swim Australia Teacher</strong>
+              <span class="cred-badge__issuer">Swim Australia (SAT)</span>
             </div>
-        </section>
+          </li>
 
-        <section class="signup" id="signup">
-            <div class="container">
-                <div class="signup-card">
-                    <h2>Get Your Free Foundational Guide</h2>
-                    <p>Sign up to receive practical exercises, motivation techniques, and insights you can use with your kids this week.</p>
-                    <form class="signup-form" id="signupForm">
-                        <div class="form-group">
-                            <label for="name">First Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <button type="submit" class="cta-primary">Get the Free Guide</button>
-                    </form>
-                </div>
+          <li class="cred-badge">
+            <div class="cred-badge__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
             </div>
-        </section>
-    </main>
+            <div>
+              <strong class="cred-badge__name">Swim Squad Fundamentals</strong>
+              <span class="cred-badge__issuer">Swim Australia (SSF)</span>
+            </div>
+          </li>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Paul Gray Performance. All rights reserved.</p>
-            <p>Sydney, NSW | <a href="mailto:paul@paulgray.com.au">paul@paulgray.com.au</a></p>
+          <li class="cred-badge">
+            <div class="cred-badge__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="3"/>
+                <line x1="12" y1="8" x2="12" y2="16"/>
+                <line x1="8" y1="12" x2="16" y2="12"/>
+              </svg>
+            </div>
+            <div>
+              <strong class="cred-badge__name">First Aid &amp; CPR</strong>
+              <span class="cred-badge__issuer">Current — Childcare setting</span>
+            </div>
+          </li>
+
+          <li class="cred-badge">
+            <div class="cred-badge__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <polyline points="9 12 11 14 15 10"/>
+              </svg>
+            </div>
+            <div>
+              <strong class="cred-badge__name">Safeguarding Children in Sport</strong>
+              <span class="cred-badge__issuer">Sport Integrity Australia</span>
+            </div>
+          </li>
+
+          <li class="cred-badge">
+            <div class="cred-badge__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <polyline points="2 17 12 22 22 17"/>
+                <polyline points="2 12 12 17 22 12"/>
+              </svg>
+            </div>
+            <div>
+              <strong class="cred-badge__name">Functional Movement Screen</strong>
+              <span class="cred-badge__issuer">Movement quality assessment (FMS)</span>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT
+    ============================================================ -->
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container contact__inner">
+
+        <div class="contact__info">
+          <h2 id="contact-heading">GET IN<br>TOUCH.</h2>
+          <p>
+            Have questions about the approach, want to know more about upcoming programs,
+            or interested in private coaching? Drop me a message and I'll get back to you
+            within 24 hours.
+          </p>
+          <p>
+            The first conversation is always free.
+          </p>
+          <div class="contact__details">
+            <div class="contact__detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              <a href="mailto:paul@paulgray.com.au">paul@paulgray.com.au</a>
+            </div>
+            <div class="contact__detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              Sydney, NSW
+            </div>
+          </div>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <div class="contact__form-wrapper">
+          <form
+            class="contact-form"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            novalidate
+          >
+            <input type="hidden" name="form-name" value="contact">
+            <p class="form-honeypot"><label>Don't fill this in: <input name="bot-field" tabindex="-1"></label></p>
+
+            <div class="form-row">
+              <label class="form-label" for="cf-name">Your name</label>
+              <input type="text" id="cf-name" name="name" placeholder="First and last name" required>
+            </div>
+
+            <div class="form-row">
+              <label class="form-label" for="cf-email">Email address</label>
+              <input type="email" id="cf-email" name="email" placeholder="your@email.com" required>
+            </div>
+
+            <div class="form-row">
+              <label class="form-label" for="cf-message">Your message</label>
+              <textarea
+                id="cf-message"
+                name="message"
+                rows="5"
+                placeholder="Tell me about your child's age, current activity level, what you'd like to improve — anything that's useful context."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full">Send message →</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <p class="footer__logo">PAUL GRAY PERFORMANCE <span>Athletic Foundation Training</span></p>
+      <p class="footer__meta">
+        <span>© 2026 Paul Gray</span>
+        <span>Swim Australia member</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
